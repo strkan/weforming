@@ -162,7 +162,18 @@ Examples will be explored in the [Integration](#igfb-integration) section, inclu
 ## iGFB Technological Enablers
 
 - **Building Digital Platforms**: Foundational software to manage, monitor, and optimize building energy use.  
-- **Real-time Controllers**: Coordinate operations across multiple energy assets in real-time.  
+- **Real-time Controllers**: Coordinate operations across multiple energy assets in real-time.
+The Real-Time Controller (RTC) is crucial to the operation of intelligent Grid Forming Buildings (iGFBs). Within an iGFB building module, the Building Management System (BMS) creates energy management schedules, which the RTC then executes. The RTC can interact with iGFB assets either directly or via the Building Automation System (BAS).
+![image](https://github.com/user-attachments/assets/67b0ac71-cf00-45dd-8d38-d984651e1dd9)
+
+As depicted in the accompanying figure, the Real-Time Controller (RTC) plays a central role in managing building operations. Its core responsibility is to ensure the accurate implementation of operational schedules provided by the Intelligent WeForming Operation Framework.
+The RTC receives a set of reference signals from the scheduling service, detailing operational plans over diverse timeframes (5 minutes to 24 hours). These plans are customized for various controllable assets, including but not limited to Battery Energy Storage Systems (BESS), EV chargers, PV trimming, Heat Pumps (HP), and Combined Heat and Power (CHP) units.
+The service also supplies the RTC with forecasted data, such as predicted solar radiation, demand forecasts, and expected battery state of charge. To guarantee precise schedule execution, the RTC must also receive current operative state information for each controllable asset. Consequently, asset state data needs to be meticulously recorded and transmitted to the RTC. Additional metered data may be sent to the RTC based on the specific asset type and operational framework.
+Alternatively, controller tasks can be individual, with each task assigned to a separate hardware unit, as illustrated in the accompanying figure. In this setup, there is no central Real-Time Controller (RTC) unit. Instead, hardware is selected based on the specific controller task it will host. This distributed RTC approach offers greater flexibility for implementing diverse software, algorithms, and accessibility protocols. 
+
+![image](https://github.com/user-attachments/assets/6da76d3a-e664-4cbe-a338-70d3416bd798)
+
+  
 - **Electrical and Thermal Power Processing Hubs**: Manage the conversion, distribution, and storage of energy within buildings.  
 - **Buildings’ Digital Models and Digital Twins**: Provide real-time simulation and optimization tools.  
 - **AI/ML Tools**: Drive intelligent decision-making for energy use and coordination.  
